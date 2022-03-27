@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    opacity: 0.4;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+    opacity: 0.4;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.25);
+    transition: color 0.2s ease;
+    opacity: 0.4;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:root body {
+    position: absolute;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
