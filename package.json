@@ -19,6 +19,8 @@
         }
     },
     "dependencies": {
+        "highlight.js": "^11.5.0",
+        "marked": "^4.0.12",
         "nuxt": "^2.0.0"
     },
     "devDependencies": {

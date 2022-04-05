@@ -4,8 +4,12 @@
     <p class="title-class">用你的声音伴孩子入眠</p>
     <p class="subtitle-class">故事·温馨·陪伴·我们</p>
     <div class="download">
-      <div>App Store</div>
-      <div>Android</div>
+      <a href="http://release.hasmash.com/e13690f6-84-dev.apk" target="_blank"
+        >App Store</a
+      >
+      <a href="http://release.hasmash.com/e13690f6-84-dev.apk" target="_blank"
+        >Android</a
+      >
     </div>
     <underline-text>用“最温馨的声音”讲“最动听的故事”</underline-text>
     <div class="section-1">
@@ -113,7 +117,9 @@ export default {
   margin-top: 80px;
   margin-bottom: 230px;
 }
-.download div {
+.download div,
+.download a {
+  text-decoration: none;
   display: inline-block;
   width: 125px;
   height: 50px;

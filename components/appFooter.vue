@@ -12,7 +12,16 @@
       </div>
     </div>
     <p class="flag">让世界因我们而有不同！</p>
-    <div class="bottom"><p>© 哈希碰撞科技有限公司 版权所有</p></div>
+    <div class="bottom">
+      <p>
+        © 哈希碰撞科技有限公司 版权所有
+        <nuxt-link to="/user" class="link-class">用户协议</nuxt-link>
+        <nuxt-link to="/privacy" class="link-class">隐私政策</nuxt-link>
+        <a class="link-class" href="http://beian.miit.gov.cn/" target="_blank"
+          >津ICP备2022001248号</a
+        >
+      </p>
+    </div>
   </div>
 </template>
 <script>
@@ -76,5 +85,10 @@ export default {
   text-align: center;
   letter-spacing: 0.2em;
   color: #f9be26;
+}
+.link-class {
+  text-decoration: none;
+  color: #171717;
+  margin-left: 10px;
 }
 </style>
