@@ -4,12 +4,8 @@
     <p class="title-class">用你的声音伴孩子入眠</p>
     <p class="subtitle-class">故事·温馨·陪伴·我们</p>
     <div class="download">
-      <a href="http://release.hasmash.com/e13690f6-84-dev.apk" target="_blank"
-        >App Store</a
-      >
-      <a href="http://release.hasmash.com/e13690f6-84-dev.apk" target="_blank"
-        >Android</a
-      >
+      <a :href="iOSLink" target="_blank">App Store</a>
+      <a :href="androidLink" target="_blank">Android</a>
     </div>
     <underline-text>用“最温馨的声音”讲“最动听的故事”</underline-text>
     <div class="section-1">
@@ -65,12 +61,23 @@ import circleText from "~/components/circleText.vue";
 import backCircle from "~/components/backCircle.vue";
 
 export default {
+  data: () => ({
+    androidLink: "http://release.hasmash.com/2022-04-30-dev.apk",
+    iOSLink: "https://testflight.apple.com/join/4lvXyMRk",
+  }),
   components: {
     appHeader,
     appFooter,
     underlineText,
     circleText,
     backCircle,
+  },
+  created() {
+    fetch("http://voice-api.hasmash.com:10085/v1/release")
+      .then((res) => res.json())
+      .then(({ result: { path: res } }) => {
+        this.androidLink = res;
+      });
   },
 };
 </script>
@@ -114,15 +121,15 @@ export default {
 }
 .download {
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: 230px;
+  margin-top: 150px;
+  margin-bottom: 350px;
 }
 .download div,
 .download a {
   text-decoration: none;
   display: inline-block;
-  width: 125px;
   height: 50px;
+  padding: 0 20px;
   background: #f9be26;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
@@ -135,6 +142,7 @@ export default {
   margin: 30px;
   color: #ffffff;
   cursor: pointer;
+  white-space: nowrap;
 }
 .section-1 {
   display: flex;
@@ -152,7 +160,6 @@ export default {
 }
 .section-1 p {
   margin: 10px 0;
-  font-family: "MS UI Gothic";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -160,14 +167,12 @@ export default {
   color: #171717;
 }
 .section-1 span {
-  font-family: "MS UI Gothic";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   color: #171717;
   float: left;
   text-align: left;
-  line-height: 22px;
 }
 .section-2 {
   display: flex;
@@ -184,12 +189,10 @@ export default {
   width: 200px;
 }
 .section-2 span {
-  font-family: "Source Han Sans CN";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #171717;
-  line-height: 26px;
 }
 .section-3 {
   display: flex;
@@ -212,7 +215,6 @@ export default {
   font-weight: 400;
   font-size: 16px;
   color: #171717;
-  line-height: 26px;
 }
 </style>
 

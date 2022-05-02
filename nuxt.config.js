@@ -4,6 +4,9 @@ module.exports = {
      */
     head: {
         title: '宝贝听我说',
+        script: [
+            { src: '/rem.js', type: 'text/javascript', charset: 'utf-8' }
+        ],
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'initial-scale=1;user-scalable=no' },
