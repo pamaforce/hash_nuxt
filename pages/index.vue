@@ -62,7 +62,7 @@ import backCircle from "~/components/backCircle.vue";
 
 export default {
   data: () => ({
-    androidLink: "http://release.hasmash.com/2022-04-30-dev.apk",
+    androidLink: "https://release.hasmash.com/2022-04-30-dev.apk",
     iOSLink: "https://testflight.apple.com/join/4lvXyMRk",
   }),
   components: {
@@ -73,7 +73,7 @@ export default {
     backCircle,
   },
   created() {
-    fetch("http://voice-api.hasmash.com:10085/v1/release")
+    fetch("https://test-voice-api.hasmash.com/v1/release")
       .then((res) => res.json())
       .then(({ result: { path: res } }) => {
         this.androidLink = res;
