@@ -9,7 +9,7 @@ module.exports = {
         ],
         meta: [
             { charset: 'utf-8' },
-            { name: 'viewport', content: 'initial-scale=1;user-scalable=no' },
+            { name: 'viewport', content: 'initial-scale=1,user-scalable=no' },
             { hid: 'description', name: 'description', content: '宝贝听我说 官方网站 哈希碰撞科技有限公司' },
             { hid: 'keywords', name: 'keywords', content: '官方网站' }
         ],
